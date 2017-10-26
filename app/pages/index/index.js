@@ -10,7 +10,7 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     array: [{ id: 'tictactoe', name: '井字游戏' }, { id: 'whacamole', name: '打地鼠' }, { id: "memo", name: "备忘录" }],
     game: 'tictactoe',
-    index: 1,
+    index: 2,
   },
   //事件处理函数
   bindViewTap: function () {
@@ -78,5 +78,6 @@ Page({
     this.setData({
       motto: text
     })
+    this.goPlayGame();
   }
 })

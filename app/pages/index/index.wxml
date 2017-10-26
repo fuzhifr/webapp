@@ -13,7 +13,7 @@
   <view class="section">
     <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" range-key="name">
       <view class="picker">
-        当前游戏：{{array[index].name}}
+        打开：{{array[index].name}}
       </view>
     </picker>
   </view>
