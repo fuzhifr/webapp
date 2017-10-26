@@ -1,29 +1,4 @@
-/**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.userinfo-avatar {
-  width: 300rpx;
-  height: 300rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
-
-.userinfo-nickname {
-  color: #aaa;
-}
-
-.usermotto {
-  margin-top: 50px;
-}
-
-.picker{
-  background-color: #eee;
-  border: 1rpx solid #999;
-}
+/* pages/index_new/index_new.wxss */
 
 .weui-flex {
   -webkit-box-align: center;

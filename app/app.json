@@ -4,7 +4,8 @@
     "pages/logs/logs",
     "pages/tictactoe/tictactoe",
     "pages/whacamole/whacamole",
-    "pages/memo/memo"
+    "pages/memo/memo",
+    "pages/index_new/index_new"
   ],
   "window": {
     "backgroundTextStyle": "light",
