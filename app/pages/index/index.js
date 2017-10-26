@@ -8,25 +8,25 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    array: [{ id: 'tictactoe', name: '井字游戏' }, { id: 'whacamole', name: '打地鼠' }],
-    game:'tictactoe',
-    index:1,
+    array: [{ id: 'tictactoe', name: '井字游戏' }, { id: 'whacamole', name: '打地鼠' }, { id: "memo", name: "备忘录" }],
+    game: 'tictactoe',
+    index: 1,
   },
   //事件处理函数
-  bindViewTap: function() {
+  bindViewTap: function () {
     wx.navigateTo({
       url: '../logs/logs'
     })
   },
-  bindPickerChange:function(e){
+  bindPickerChange: function (e) {
     this.setData({
       index: e.detail.value
     })
   },
-  getPic:function(){
-    wx.chooseImage({ count: 1, success: (tempFilePaths) => { console.log(tempFilePaths)}})
+  getPic: function () {
+    wx.chooseImage({ count: 1, success: (tempFilePaths) => { console.log(tempFilePaths) } })
   },
-  goPlayGame: function(){
+  goPlayGame: function () {
     const game = `../${this.data.array[this.data.index].id}/${this.data.array[this.data.index].id}`;
     wx.navigateTo({
       url: game
@@ -39,7 +39,7 @@ Page({
         hasUserInfo: true
       })
       this.showInfo()
-    } else if (this.data.canIUse){
+    } else if (this.data.canIUse) {
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
       // 所以此处加入 callback 以防止这种情况
       app.userInfoReadyCallback = res => {
@@ -63,7 +63,7 @@ Page({
       })
     }
   },
-  getUserInfo: function(e) {
+  getUserInfo: function (e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
     console.log(e.detail);
@@ -73,10 +73,10 @@ Page({
     });
     this.showInfo()
   },
-  showInfo:function(){
+  showInfo: function () {
     const text = `Welcome ${this.data.userInfo.nickName} from ${this.data.userInfo.country}`;
     this.setData({
-      motto:text
+      motto: text
     })
   }
 })

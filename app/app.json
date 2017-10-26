@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/tictactoe/tictactoe",
-    "pages/whacamole/whacamole"
+    "pages/whacamole/whacamole",
+    "pages/memo/memo"
   ],
   "window": {
     "backgroundTextStyle": "light",
