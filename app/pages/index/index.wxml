@@ -23,7 +23,7 @@
           <view class="kind-list__item-bd {{item.open ? 'kind-list__item-bd_show' : ''}}">
             <view class="weui-cells {{item.open ? 'weui-cells_show' : ''}}">
               <block wx:for="{{item.pages}}" wx:for-item="page" wx:key="*this.id">
-                <navigator url="../{{page.id}}/{{page.id}}" class="weui-cell weui-cell_access" >
+                <navigator url="../{{page.id}}/{{page.id}}" class="weui-cell weui-cell_access" bindtouchmove="touchMove">
                   <view class="weui-cell__bd">{{page.name}}</view>
                   <view class="weui-cell__ft weui-cell__ft_in-access"></view>
                 </navigator>
@@ -33,6 +33,10 @@
         </view>
       </block>
     </view>
-
   </view>
+  <modal hidden="{{true}}" confirm-text="{{newFileName==''?'取消':'新建'}}" no-cancel="{{newFileName==''}}">
+        <view class="modal_title">新建文件夹</view>
+        <view class="modal_desc">请为此文件夹输入名称</view>
+        <input class="modal_input_text" placeholder="请输入文本" bindinput="handleInput"/>
+  </modal>
 </view>

@@ -1,0 +1,18 @@
+<view class="page">
+  <view class='page__hd_control'>编辑</view>
+  <view scroll-y class='page__bd'>
+    <view class="page__title">文件夹</view>
+    <view class="weui-cells weui-cells_after-title">
+      <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">备忘录</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+    </view>
+  </view>
+  <view class='create_file_wrap'>
+    <view class="create_file_iput_wrap">
+      <input placeholder='新文件夹名字' id="newFloder" value="{{newFolderName}}" bindinput="handleInput" />
+    </view>
+    <view class="create_file_btn" style="{{newFolderName==''?'color:gray':''}}" bindtap="handleCreate">新建</view>
+  </view>
+</view>

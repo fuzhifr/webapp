@@ -1,0 +1,28 @@
+.create_file_wrap {
+  position: fixed;
+  width: 100%;
+  padding: 5px 8px;
+  margin: 0;
+  bottom: 0;
+  background-color: white;
+  color: #e67300;
+  text-align: left;
+  font-weight: normal;
+}
+
+.create_file_iput_wrap {
+  display: inline-block;
+  vertical-align: middle;
+  width: 80%;
+  border-right: 1px solid;
+}
+
+.create_file_iput_wrap input {
+  height: 40px;
+}
+
+.create_file_btn {
+  display: inline-block;
+  width: 19%;
+  text-align: center;
+}

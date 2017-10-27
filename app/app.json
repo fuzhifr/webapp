@@ -1,10 +1,13 @@
 {
   "pages": [
+    
     "pages/index/index",
+    "pages/meemoo/meemoo",
     "pages/logs/logs",
     "pages/tictactoe/tictactoe",
     "pages/whacamole/whacamole",
     "pages/memo/memo"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",

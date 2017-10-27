@@ -13,7 +13,7 @@ Page({
         id: 'utils',
         name: '功能',
         open: false,
-        pages: [{ id: 'memo',name:'备忘录'}]
+        pages: [{ id: 'memo', name: '备忘录' }, { id: 'meemoo', name: '木木备忘录' }]
       },
       {
         id: 'games',
@@ -21,7 +21,14 @@ Page({
         open: false,
         pages: [{ id: 'tictactoe', name: '井字游戏' }, { id: 'whacamole', name: '打地鼠' }]
       },
-    ]
+    ],
+    newFileName: ''
+  },
+  handleInput:function(e){
+    this.setData({ newFileName: e.detail.value})
+  },
+  touchMove:function(e){
+    console.log(e)
   },
   kindToggle: function (e) {
     var id = e.currentTarget.id, list = this.data.list;
