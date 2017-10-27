@@ -9,9 +9,24 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     array: [{ id: 'tictactoe', name: '井字游戏' }, { id: 'whacamole', name: '打地鼠' }, { id: "memo", name: "备忘录" }],
-    game:"tictactoe",
-    index: 1, 
-     },
+    game: 'tictactoe',
+    index: 2,
+  },
+    list: [
+      {
+        id: 'utils',
+        name: '功能',
+        open: false,
+        pages: ['memo', 'todo']
+      },
+      {
+        id: 'games',
+        name: '游戏',
+        open: false,
+        pages: ['tictactoe', 'whacamole']
+      },
+    ]
+  },
   //事件处理函数
   bindViewTap: function () {
     wx.navigateTo({
@@ -19,9 +34,29 @@ Page({
     })
   },
   bindPickerChange: function (e) {
+  kindToggle: function (e) {
+    var id = e.currentTarget.id, list = this.data.list;
+    for (var i = 0, len = list.length; i < len; ++i) {
+      if (list[i].id == id) {
+        list[i].open = !list[i].open
+      } else {
+        list[i].open = false
+      }
+    }
     this.setData({
       index: e.detail.value
     })
+      list: list
+    });
+  }, 
+  handleNavTap:function(e){
+    const id = e.currentTarget.id;
+    const list = this.data.list;
+    list.forEach((item)=>{item.open=false});
+    this.setData({
+      list: list
+    });
+    
   },
   getPic: function () {
     wx.chooseImage({ count: 1, success: (tempFilePaths) => { console.log(tempFilePaths) } })
