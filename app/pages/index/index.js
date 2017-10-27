@@ -13,13 +13,13 @@ Page({
         id: 'utils',
         name: '功能',
         open: false,
-        pages: ['memo', 'todo']
+        pages: [{ id: 'memo',name:'备忘录'}]
       },
       {
         id: 'games',
         name: '游戏',
         open: false,
-        pages: ['tictactoe', 'whacamole']
+        pages: [{ id: 'tictactoe', name: '井字游戏' }, { id: 'whacamole', name: '打地鼠' }]
       },
     ]
   },
