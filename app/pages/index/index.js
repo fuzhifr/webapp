@@ -8,10 +8,6 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    array: [{ id: 'tictactoe', name: '井字游戏' }, { id: 'whacamole', name: '打地鼠' }, { id: "memo", name: "备忘录" }],
-    game: 'tictactoe',
-    index: 2,
-  },
     list: [
       {
         id: 'utils',
@@ -27,13 +23,6 @@ Page({
       },
     ]
   },
-  //事件处理函数
-  bindViewTap: function () {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
-  bindPickerChange: function (e) {
   kindToggle: function (e) {
     var id = e.currentTarget.id, list = this.data.list;
     for (var i = 0, len = list.length; i < len; ++i) {
@@ -44,8 +33,6 @@ Page({
       }
     }
     this.setData({
-      index: e.detail.value
-    })
       list: list
     });
   }, 
@@ -60,12 +47,6 @@ Page({
   },
   getPic: function () {
     wx.chooseImage({ count: 1, success: (tempFilePaths) => { console.log(tempFilePaths) } })
-  },
-  goPlayGame: function () {
-    const game = `../${this.data.array[this.data.index].id}/${this.data.array[this.data.index].id}`;
-    wx.navigateTo({
-      url: game
-    })
   },
   onLoad: function () {
     if (app.globalData.userInfo) {
@@ -113,6 +94,5 @@ Page({
     this.setData({
       motto: text
     })
-    this.goPlayGame();
   }
 })
