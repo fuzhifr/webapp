@@ -33,7 +33,7 @@
                 </view>
                 <view class="detail_tips_bd">
                   <view class="detail_tips_title">金额</view>
-                  <view class="detail_tips_content">{{item.amount>0 ?item.amount+' (收入)':item.amount+' (收出)'}}</view>
+                  <view class="detail_tips_content">{{item.amount>0 ?item.amount+' (收入)':item.amount+' (支出)'}}</view>
                 </view>
                 <view class="detail_tips_bd">
                   <view class="detail_tips_title">时间</view>
