@@ -4,7 +4,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-    newFolderName: ''
+    newFolderName: '',
+    files:[
+      '备忘录', 
+      '木木备忘录', 
+      '井字游戏', 
+      '打地鼠',
+    ],
   },
   handleInput: function (e) {
     var id = e.target.id;
@@ -13,7 +19,28 @@ Page({
   },
   handleCreate: function () {
     this.setData({ newFolderName: '' });
+    this.createSuc();
   },
+  createSuc:function(){
+    wx.showToast({
+      title: '创建成功',
+      icon: 'success',
+      duration: 2000
+    });
+  },
+  kindToggle: function (e) {
+    var id = e.currentTarget.id, list = this.data.list;
+    for (var i = 0, len = list.length; i < len; ++i) {
+      if (list[i].id == id) {
+        list[i].open = !list[i].open
+      } else {
+        list[i].open = false
+      }
+    }
+    this.setData({
+      list: list
+    });
+  }, 
   /**
    * 生命周期函数--监听页面加载
    */

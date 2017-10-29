@@ -1,8 +1,10 @@
 {
   "pages": [
-    
     "pages/index/index",
+    "pages/ledger/ledger",
+    
     "pages/meemoo/meemoo",
+    
     "pages/logs/logs",
     "pages/tictactoe/tictactoe",
     "pages/whacamole/whacamole",
@@ -11,6 +13,7 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
+    "backgroundColor":"yellow",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"

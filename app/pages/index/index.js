@@ -13,7 +13,7 @@ Page({
         id: 'utils',
         name: '功能',
         open: false,
-        pages: [{ id: 'memo', name: '备忘录' }, { id: 'meemoo', name: '木木备忘录' }]
+        pages: [{ id: 'memo', name: '备忘录' }, { id: 'meemoo', name: '木木备忘录' }, { id: 'ledger', name: '账本' }]
       },
       {
         id: 'games',

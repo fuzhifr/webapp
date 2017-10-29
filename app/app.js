@@ -32,8 +32,10 @@ App({
         }
       }
     })
+    this.globalData.devideInfo = wx.getSystemInfoSync()
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    devideInfo:null
   }
 })
